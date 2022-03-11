@@ -44,5 +44,5 @@ body {
 #extend {
     height: calc( 100% - <?= $view_head_height - 40 ?>px - 2px );
 }
-}
+
 </style>
