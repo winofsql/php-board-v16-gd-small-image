@@ -140,6 +140,7 @@ $( function(){
     <h3 class="alert alert-primary"><a href="control.php" style="color:black;">掲示板 ( MySQL )</a></h3>
     <div id="content">
     <form method="POST" target="myframe" enctype="multipart/form-data">
+        <input type="hidden" name="MAX_FILE_SIZE" value="10000000">
         <div>
             <span class="title_entry">タイトル</span> 
             <input type="text" name="subject" id="subject" pattern=".*\S+.*" required>
