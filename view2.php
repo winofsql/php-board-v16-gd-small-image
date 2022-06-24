@@ -36,6 +36,8 @@ $(function(){
     $(".body_text").on("click", function(){
 
         clipbpardText = $(this).text();
+        clipbpardText = clipbpardText.replace(/^\s+/, "");
+        clipbpardText = clipbpardText.replace(/\s+$/, "");
 
     });
 
@@ -55,7 +57,7 @@ $(function(){
 
         var text = $(this).nextAll().eq(1).text();
         text = text.replace(/^\s+/, "");
-        text = text.replace("<br>", "\n");
+        text = text.replace(/\s+$/, "");
         parent.$("#text").val(text);
     });
 
