@@ -324,12 +324,17 @@ LOG;
 
 if ( $entry["image"] != null ) {
 
+    $img_path = "noimage.png";
+    if ( file_exists("{$data_path}/{$entry['image']}") ) {
+        $img_path = "{$data_path}/{$entry['image']}";
+    }
+
     $body_text = <<<BODY_TEXT
     <div class="body_text">
         <a
-            href="{$data_path}/{$entry['image']}"
+            href="{$img_path}"
             data-lightbox="image">
-            <img class="me-3" src="{$data_path}/s/{$entry['image']}" style="float:left;width:150px;">
+            <img class="me-3" src="{$img_path}" style="float:left;width:150px;">
         </a>{$entry['body']}
         <div style="clear:both"></div>
     </div>
